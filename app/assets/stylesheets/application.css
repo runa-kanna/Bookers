@@ -14,29 +14,25 @@
  *= require_self
  */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   margin: 33px;
 }
 
-.h1 {
+.h2  {
   margin: auto 0;
 }
 
-.p {
-  margin: 33px;
+.top-text p {
+  margin: 33px
 }
 
-
-.h1 {
-  margin: auto 0;
+.th, td {
+  padding-top: 1px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-.p {
+.show-text p {
   margin: 33px;
 }
