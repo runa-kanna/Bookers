@@ -12,6 +12,7 @@ class BooksController < ApplicationController
     else
       render :index
     end  
+    flash[:notice] = "Book was successfully created" 
   end
   
   def index
@@ -25,17 +26,21 @@ class BooksController < ApplicationController
   
   def edit
     @book = Book.find(params[:id])
+    
   end
   
   def update
     book = Book.find(params[:id])
     book.update(book_params)
+    flash[:notice] = "Book was successfully updated" 
+    redirect_to '/books'
   end
   
   def destroy
     book = Book.find(params[:id])
     book.destroy
     redirect_to '/books'
+    flash[:notice] = "Book was successfully destroyed." 
   end
   
   private
